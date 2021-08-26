@@ -1,13 +1,13 @@
 {
   "name": "js-template",
   "version": "1.0.0",
-  "description": "<<<<<<< HEAD",
+  "description": "To-do List App",
   "main": "webpack.config.js",
   "scripts": {
     "start-dev": "concurrently \"npm run dev\" \"npm run css-dev\"",
     "start-prod": "concurrently \"npm run prod\" \"npm run css-prod\"",
-    "css-dev": "TAILWIND_MODE=watch postcss css/styles.css -o dist/styles.css -w --verbose",
-    "css-prod": "NODE_ENV=production postcss css/styles.css -o dist/styles.css",
+    "css-dev": "TAILWIND_MODE=watch postcss css/styles.css -o src/styles.css -w --verbose",
+    "css-prod": "NODE_ENV=production postcss css/styles.css -o src/styles.css",
     "dev": "npx webpack -w --config webpack.config.js --mode development",
     "prod": "npx webpack -w --config webpack.config.js --env production"
   },

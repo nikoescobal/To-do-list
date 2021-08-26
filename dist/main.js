@@ -15,7 +15,7 @@
   \**********************/
 /***/ (() => {
 
-eval("\n\n//# sourceURL=webpack://js-template/./src/index.js?");
+eval("let tasks = [];\nclass Task {\n  constructor(title, description, startDate, dueDate, priority, notes) {}\n};\n\nlet main = document.getElementById(\"main\");\n\nmain.innerHTML =\n  `\n  \n  `\n\nlet title = document.getElementById(\"title\").value;\nlet description = document.getElementById(\"description\").value;\nlet startDate = document.getElementById(\"startDate\").value;\nlet dueDate = document.getElementById(\"dueDate\").value;\nlet priortiy = document.getElementById(\"priority\").value;\nlet notes = document.getElementById(\"notes\").value;\n\nlet task = new Task('Throw trash', 'throwing trash', '12-12-2021', '12-12-2021', 'urgent', 'do this every thurs')\n\ntasks.push(task)\n\n\n\nconsole.log(tasks)\n\n//# sourceURL=webpack://js-template/./src/index.js?");
 
 /***/ })
 
