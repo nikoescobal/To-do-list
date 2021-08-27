@@ -5,7 +5,15 @@ const main = document.getElementById("main");
 let projects = [];
 
 const defaultProject = new Project('My Project', 'Let\'s get sh*t done!')
-const defaultTasks = new Task('Throw trash', 'throw trash outside', 11, 11, 'Urgent', 'It\'s been a week, dude.')
+const defaultTasks = [
+  new Task('Throw trash', 'throw trash outside', 11, 11, 'Urgent', 'It\'s been a week, dude.'),
+  new Task('Eat khash', 'make sure to eat everything', 12, 12, 'Urgent', 'Daily sustenance.')
+]
+defaultProject.tasks.push(...defaultTasks)
+
+
+console.log(defaultProject)
+
 const displayTask = () => {
 
   tasks.forEach(task => {
