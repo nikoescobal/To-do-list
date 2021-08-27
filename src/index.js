@@ -2,9 +2,10 @@ import Project from "./project";
 import Task from "./task";
 
 const main = document.getElementById("main");
-let projects = [('')];
-let tasks = [];
+let projects = [];
 
+const defaultProject = new Project('My Project', 'Let\'s get sh*t done!')
+const defaultTasks = new Task('Throw trash', 'throw trash outside', 11, 11, 'Urgent', 'It\'s been a week, dude.')
 const displayTask = () => {
 
   tasks.forEach(task => {
