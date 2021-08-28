@@ -554,15 +554,47 @@ video {
 [hidden] {
   display: none;
 }
+
+*, ::before, ::after {
+	--tw-border-opacity: 1;
+	border-color: rgba(229, 231, 235, var(--tw-border-opacity));
+}
 .mx-auto {
 	margin-left: auto;
 	margin-right: auto;
 }
+.mt-2 {
+	margin-top: 0.5rem;
+}
+.mt-1 {
+	margin-top: 0.25rem;
+}
+.ml-2 {
+	margin-left: 0.5rem;
+}
+.flex {
+	display: flex;
+}
+.hidden {
+	display: none;
+}
 .h-full {
 	height: 100%;
 }
+.h-4 {
+	height: 1rem;
+}
 .w-full {
 	width: 100%;
+}
+.w-64 {
+	width: 16rem;
+}
+.cursor-pointer {
+	cursor: pointer;
+}
+.items-start {
+	align-items: flex-start;
 }
 .items-center {
 	align-items: center;
@@ -570,12 +602,42 @@ video {
 .justify-center {
 	justify-content: center;
 }
+.justify-between {
+	justify-content: space-between;
+}
+.rounded {
+	border-radius: 0.25rem;
+}
+.border-b {
+	border-bottom-width: 1px;
+}
+.bg-pink-500 {
+	--tw-bg-opacity: 1;
+	background-color: rgba(236, 72, 153, var(--tw-bg-opacity));
+}
+.bg-white {
+	--tw-bg-opacity: 1;
+	background-color: rgba(255, 255, 255, var(--tw-bg-opacity));
+}
 .bg-blue-500 {
 	--tw-bg-opacity: 1;
 	background-color: rgba(59, 130, 246, var(--tw-bg-opacity));
 }
+.fill-current {
+	fill: currentColor;
+}
 .p-24 {
 	padding: 6rem;
+}
+.p-8 {
+	padding: 2rem;
+}
+.p-2 {
+	padding: 0.5rem;
+}
+.py-1 {
+	padding-top: 0.25rem;
+	padding-bottom: 0.25rem;
 }
 .text-center {
 	text-align: center;
@@ -583,9 +645,20 @@ video {
 .font-mono {
 	font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
 }
+.font-sans {
+	font-family: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+}
 .text-4xl {
 	font-size: 2.25rem;
 	line-height: 2.5rem;
+}
+.text-sm {
+	font-size: 0.875rem;
+	line-height: 1.25rem;
+}
+.text-xs {
+	font-size: 0.75rem;
+	line-height: 1rem;
 }
 .font-bold {
 	font-weight: 700;
