@@ -1,48 +1,3 @@
-<<<<<<< HEAD
-import Project from "./project";
-import Task from "./task";
-
-const main = document.getElementById("main");
-let projects = [];
-
-const defaultProject = new Project('My Project', 'Let\'s get sh*t done!')
-const defaultTasks = [
-  new Task('Throw trash', 'throw trash outside', 11, 11, 'Urgent', 'It\'s been a week, dude.'),
-  new Task('Eat khash', 'make sure to eat everything', 12, 12, 'Urgent', 'Daily sustenance.')
-]
-defaultProject.tasks.push(...defaultTasks)
-
-
-console.log(defaultProject)
-
-const displayTask = () => {
-
-  tasks.forEach(task => {
-
-  });
-
-  main.innerHTML =
-    `
-<div>
-  <label for="title">Title:</label><br>
-  <input type="text" id="title"><br><br>
-  <label for="description">Description:</label><br>
-  <input type="text" id="description"><br><br>
-  <label for="startDate">Start Date:</label><br>
-  <input type="text" id="startDate"><br><br>
-  <label for="dueDate">Due Date:</label><br>
-  <input type="text" id="dueDate"><br><br>
-  <label for="priority">Priority:</label><br>
-  <input type="text" id="priority"><br><br>
-  <label for="notes">Notes:</label><br>
-  <input type="text" id="notes"><br><br>
-  <button type="submit" id="create-task">Create Task</button>
-</div>
-  `
-}
-
-const addTask = () => {
-=======
 let projects = [];
 let tasks = [];
 class Task {
@@ -93,7 +48,9 @@ function displayTasks(task) {
     <li>Priority:${task.priority}</li><br>
     <li>Notes:${task.notes}</li><br>
     <button type="submit" id="create-task">Create Task</button>
-    <div class="bg-blue w-full p-8 flex justify-center font-sans">
+  </ul>
+
+  <div class="bg-blue w-full p-8 flex justify-center font-sans">
 <div class="rounded bg-grey-light w-64 p-2">
   <div class="flex justify-between py-1">
   	<h3 class="text-sm">New landing page</h3>
@@ -122,9 +79,6 @@ function displayTasks(task) {
   </div>
 </div>
 </div>
-  </ul>
-
-  
 
     `
   main.append(ul);
@@ -132,7 +86,6 @@ function displayTasks(task) {
 }
 
 function addTasks() {
->>>>>>> temp
   let title = document.getElementById("title").value;
   let description = document.getElementById("description").value;
   let startDate = document.getElementById("startDate").value;
