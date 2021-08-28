@@ -1,7 +1,7 @@
-let categories = [];
+let projects = [];
 let tasks = [];
 class Task {
-  constructor(title, description, startDate, dueDate, priority, notes, category) {
+  constructor(title, description, startDate, dueDate, priority, notes, project) {
     this.title = title
     this.description = description
     this.startDate = startDate
@@ -9,15 +9,13 @@ class Task {
     this.priority = priority
     this.notes = notes
     this.checklist = false
-    this.category = category
+    this.project = project
   }
 };
 
-function displayTasks() {
-  let main = document.getElementById("main");
-
-  main.innerHTML =
-    `
+let form = document.getElementById("form");
+form.innerHTML =
+  `
   <div>
     <label for="title">Title:</label><br>
     <input type="text" id="title"><br><br>
@@ -34,8 +32,27 @@ function displayTasks() {
     <button type="submit" id="create-task">Create Task</button>
   </div>
     `
-}
 
+function displayTasks(task) {
+
+  let main = document.getElementById("main");
+  let ul = document.createElement("ul");
+
+  ul.innerHTML =
+    `
+  <ul>
+    <li>Title:${task.title}</li><br>
+    <li>Description:${task.description}</li><br>
+    <li>Start Date:${task.startDate}</li><br>
+    <li>Due Date:${task.dueDate}</li><br>
+    <li>Priority:${task.priority}</li><br>
+    <li>Notes:${task.notes}</li><br>
+    <button type="submit" id="create-task">Create Task</button>
+  </ul>
+    `
+  main.append(ul);
+
+}
 
 function addTasks() {
   let title = document.getElementById("title").value;
@@ -48,14 +65,25 @@ function addTasks() {
   tasks.push(task);
 }
 
-// let submit = document.getElementById("create-task");
+let submit = document.getElementById("create-task");
 
 submit.addEventListener('click', e => {
-  addTask();
+  addTasks();
+  tasks.forEach(task => {
+    displayTasks(task);
+  });
   console.log(tasks);
 
-  // Categories consist of tasks because each category should have their own tasks.
+  // Projects consist of tasks because each project should have their own tasks.
 
 })
 
 console.log(tasks)
+
+
+// function process(a, b) {
+
+//   a + b
+//   console.log('12');
+// }
+// process(12, 10);
