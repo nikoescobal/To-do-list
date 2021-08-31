@@ -16,20 +16,20 @@ class Task {
 let form = document.getElementById("form");
 form.innerHTML =
   `
-  <div>
+  <div class="text-center">
     <label for="title">Title:</label><br>
-    <input type="text" id="title"><br><br>
+    <input class="px-10" type="text" id="title"><br><br>
     <label for="description">Description:</label><br>
-    <input type="text" id="description"><br><br>
+    <input class="px-10" type="text" id="description"><br><br>
     <label for="startDate">Start Date:</label><br>
-    <input type="text" id="startDate"><br><br>
+    <input class="px-10" type="text" id="startDate"><br><br>
     <label for="dueDate">Due Date:</label><br>
-    <input type="text" id="dueDate"><br><br>
+    <input class="px-10" type="text" id="dueDate"><br><br>
     <label for="priority">Priority:</label><br>
-    <input type="text" id="priority"><br><br>
+    <input class="px-10" type="text" id="priority"><br><br>
     <label for="notes">Notes:</label><br>
-    <input type="text" id="notes"><br><br>
-    <button type="submit" id="create-task">Create Task</button>
+    <input class="px-10" type="text" id="notes"><br><br>
+    <button type="submit" class="bg-green-500 px-10 p-3 rounded"  id="create-task">Create Task</button>
   </div>
     `
 
