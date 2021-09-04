@@ -23,7 +23,7 @@ let projectForm = document.getElementById("projectForm");
 projectForm.innerHTML =
   `
   <div class="text-center">
-    <label for="title">Title:</label><br>
+    <label for="title">Project Title:</label><br>
     <input class="px-10 rounded" type="text" id="project-title"><br><br>
     <button type="submit" class="bg-green-500 px-10 p-3 rounded"  id="create-project">Create Project</button>
   </div>
@@ -34,7 +34,7 @@ let taskForm = document.getElementById("taskForm");
 taskForm.innerHTML =
   `
   <div class="text-center">
-    <label for="title">Title:</label><br>
+    <label for="title">Task Title:</label><br>
     <input class="px-10 rounded" type="text" id="task-title"><br><br>
     <label for="description">Description:</label><br>
     <input class="px-10 rounded" type="text" id="description"><br><br>
@@ -126,19 +126,29 @@ submit.addEventListener('click', e => {
 
 console.log(tasks)
 
+let titleDict = {}
+
 function addProjects() {
+
   let title = document.getElementById("project-title").value;
   let project = new Project(title)
-  projects.push(project);
+  // All Project titles should be unique. Loop through projects and make sure to push unique keys
+  // unless project title is undefined, display it
+  // after running code below, dict will not output the project title. Content of dict will be dict = {'123':true}
+  // issue is you can't access the value but only the key. Accessing the value returns undefined, so just access key
+  if (typeof titleDict[title] !== 'undefined') {} else {
+    titleDict[title] = true;
+    projects.push(project);
+    displayProject(project);
+  }
 }
+
+
 
 let projectSubmit = document.getElementById("create-project");
 
 projectSubmit.addEventListener('click', e => {
   addProjects();
-  projects.forEach(project => {
-    displayProject(project);
-  });
   console.log(projects);
 
 });
